@@ -1,0 +1,34 @@
+seconds_total = input x
+seconds_in_day = 60 * 60 * 24
+seconds_in_hour = 60 * 60
+seconds_in_minute = 60  
+
+
+Number of days = 
+ -> seconds / seconds_in_day
+
+Number of Hours = 
+ -> (seconds - (Number of days *seconds_in_day)) / seconds_in_hour
+
+Number of Minutes =
+-> (seconds - (Number of days *seconds_in_day) - (Number of Hours *seconds_in_hour) )/seconds_in_minute
+
+Number of Seconds =
+-> seconds - (Number of days *seconds_in_day) - (Number of Hours *seconds_in_hour) - (Number of Minutes * seconds_in_minute)
+
+input x { 
+    if (Number of days >= 1) - yes - output "display quotient of Number of days "
+                                   - output "display quotient of Number of Hours"
+                                   - output "display quotient of Number of Minutes"
+                                   - output "display quotient of Number of Seconds"
+
+                             - no  - else if (Number of Hours >=1) - yes - output "display quotient of Number of Hours"
+                                                                         - output "display quotient of Number of Minutes"
+                                                                         - output "display quotient of Number of Seconds"
+
+                                                                    - no - else if (Number of Minutes >= 1) -yes - output "display quotient of Number of Minutes"
+                                                                                                                 - output "display quotient of Number of Seconds" 
+                                                                                                                 
+                                                                                                            - no - else display - output "display quotient of Number of Seconds"
+
+}
