@@ -1,0 +1,6 @@
+computer select a;
+client selects b;
+if (b equals a)
+  yes - you guessed the computer number
+  no - else if (b > a) -yes - output "lower -guess again"
+                       -no (else) - output "higher - guess again";
